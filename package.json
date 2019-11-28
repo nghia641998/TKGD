@@ -6,6 +6,8 @@
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "cross-fetch": "^3.0.4",
+    "express": "^4.17.1",
+    "express-favicon": "^2.0.1",
     "gh-pages": "^2.1.1",
     "history": "^4.10.1",
     "react": "^16.9.0",
