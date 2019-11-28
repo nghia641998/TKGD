@@ -7,6 +7,7 @@
   z-index: 999;
   background: white;
   box-shadow: 1px 3px 5px #80808069;
+  padding: 0 24px;
 }
 
 .header-right {
@@ -16,7 +17,8 @@
 
 .Header-left {
   font-size: 40px;
-  padding: 10px 35px;
+  padding: 10px 0;
+  margin-left: 20px;
   font-weight: 700;
   color: #23238b;
 }
@@ -29,9 +31,18 @@
   text-align: center;
   cursor: pointer;
 }
-
 .header-active {
-  border-bottom: 1.5px solid #212a32;
+  position: relative;
+  font-weight: bold;
+  font-size: 18px;
+}
+.header-active::before {
+  position: absolute;
+  width: 383.005px;
+  height: 1px;
+    top: 64px;
+    content: "";
+    background-color: #b3b3b3;
 }
 
 .sepreate {
@@ -50,8 +61,8 @@
 .footer {
   justify-content: space-around;
   display: flex;
-  background-color: #6c6b6b;
-  padding: 20px;
+  background-color: #4e4e4e;
+  padding: 30px 20px;
 }
 
 .logo {
@@ -72,6 +83,7 @@
 .footer-info-title {
   font-size: 19px;
   font-weight: 600;
+  margin-bottom: 8px;
 }
 
 .footer-info {

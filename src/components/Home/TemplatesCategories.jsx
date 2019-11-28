@@ -31,10 +31,11 @@ class TemplatesCategories extends Component {
     render() { 
         return (  
             <div className="default-template mt-3">
-                <div className="default-template--header">
-                    <div id="Default_Templates">
+            <div className="header--underline">
                         <span>Templates Categories</span>
                     </div>
+                <div className="default-template--header flex-end">
+                    
                     <a role="button" href="script:0" className="btn p-1 mb-2">
                         <div className="d-flex flex-column">
                             <div id="All">

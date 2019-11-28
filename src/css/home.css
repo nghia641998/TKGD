@@ -112,6 +112,7 @@
 .default-template--header{
   display: flex;
   justify-content: space-between;
+  margin-bottom: 24px;
 }
 #Component_19___1 {
   width: 45.206px;
@@ -149,6 +150,8 @@
   font-size: 24px;
   color: rgba(112, 112, 112, 1);
 }
+
+
 #Templates_Categories {
   position: absolute;
   left: 499.235px;
@@ -242,6 +245,13 @@
 
 .category-item{
   width: 250px;
+  height: 70px;
+  background: rgb(222, 222, 222);
+  border: none;
+  border-radius: 8px;
+  font-size: 24px;
+  color: rgba(132,132,132,1);
+  padding-top: 15px;
 }
 
 .btn-page-number {
@@ -273,4 +283,41 @@
   border-color: #4a4747;
   color: white;
   text-decoration: none;
+}
+
+.flex-end{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header--underline{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  font-size: 32px;
+    color: rgba(112,112,112,1);
+    margin-top: 80px;
+}
+
+.header--underline::before{
+  position: absolute;
+  width: 383.005px;
+  height: 1px;
+    top: 64px;
+    content: "";
+    background-color: #b3b3b3;
+}
+
+.btn--add{
+  background: rgb(90, 189, 255);
+  width: 91px;
+  height: 46px;
+  font-size: 22px;
+  color: rgba(255,255,255,1);
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.btn--add:hover{
+  background: rgb(28, 160, 249);
 }
