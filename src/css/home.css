@@ -260,6 +260,14 @@
   line-height: 32px;
 }
 
+.btn-page-number-selected {
+  background-color: #4a4747;
+  border-color: #4a4747;
+  color: white;
+  text-decoration: none;
+}
+
+
 .btn-page-number:hover {
   background-color: #4a4747;
   border-color: #4a4747;
