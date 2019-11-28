@@ -38,6 +38,8 @@ class Home extends Component {
           </div>
           <div className="home--body">
             <DefaultTemplates />
+            <TemplatesCategories/>
+            <MyTemplates/>
           </div>
           
         </div>

@@ -125,8 +125,6 @@
   width: 45.206px;
   height: 10.896px;
   transform: matrix(1, 0, 0, 1, 0, 0);
-  position: absolute;
-  left: 2px;
 }
 #All {
   margin-left: 8px;
@@ -170,16 +168,13 @@
 .repeat {
   overflow: hidden;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
-  margin: 40px 0;
   flex-wrap: wrap;
 }
 .Repeat_Grid {
   width: 219px;
   height: 287px;
-  overflow: visible;
-  margin-bottom: 24px;
 }
 .Image_4 {
   overflow: visible;
@@ -236,4 +231,38 @@
   border-radius: 8px;
   font-size: 18px;
   color: rgba(112,112,112,1);
+}
+.btn-none-outline:focus{
+  outline: none;
+}
+
+.z-index-5{
+  z-index: 5;
+}
+
+.category-item{
+  width: 250px;
+}
+
+.btn-page-number {
+  width: 35px;
+  height: 35px;
+  border-style: solid none solid solid;
+  border-color: #dfdfdf;
+  border-width: 1px;
+  line-height: 35px;
+  text-align: center;
+  color: #848484;
+}
+
+.btn-page-number-end {
+  border-style: solid;
+  line-height: 32px;
+}
+
+.btn-page-number:hover {
+  background-color: #4a4747;
+  border-color: #4a4747;
+  color: white;
+  text-decoration: none;
 }

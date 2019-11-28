@@ -3,192 +3,77 @@ import React, { Component } from 'react';
 class MyTemplates extends Component {
 
     renderTemplates = () => {
-        const { arrMyTemplates, invertIsMouseOver } = this.props;
         const templates = [...Array(8).keys()]
         return (
-            <>
-            <div id="Repeat_Grid_5">
+            <div className="d-flex flex-wrap justify-content-around">
                 {
-                    templates.map(item => {
+                    templates.map((item) => {
                         return (
-                            <div id={`Repeat_Grid_5_${item}`} 
-                                key={item}
-                                onMouseEnter={() => invertIsMouseOver(item)}
-                                onMouseLeave={() => invertIsMouseOver(item)}>
-                                <svg className="Image-CV">
-                                    <pattern elementId={`Image_5_A11_Rectangle_${item}`} 
-                                        id={`Image_5_A11_Rectangle_${item}_pattern`} 
-                                        x="0" y="0"
-                                        width="100%" height="100%">
-                                        <image x="0" y="0" 
-                                            width="100%" height="100%" 
-                                            href="/img/Image_4_A11_Rectangle_21_pattern.png" 
-                                            xlinkHref="/img/Image_4_A11_Rectangle_21_pattern.png"/>
-                                    </pattern>
-                                    <rect fill={`url(#Image_5_A11_Rectangle_${item}_pattern)`} 
-                                        stroke="rgba(209,209,209,1)" 
-                                        strokeWidth="1px" 
-                                        strokeLinejoin="miter" 
-                                        strokeLinecap="butt" 
-                                        strokeMiterlimit="4" 
-                                        shapeRendering="auto" 
-                                        id="Image_5" 
-                                        rx="0" ry="0" 
-                                        x="0" y="0" 
-                                        width="219" height="287"/>
-                                </svg>
-                                {
-                                    arrMyTemplates[item] === true
-                                    &&
-                                    (
-                                        <div id="Component_3___18" 
-                                            className="Component_3___18">
-                                            <svg className="Rectangle_115_A11_Rectangle_46">
-                                                <rect fill="rgba(48,48,48,1)" 
-                                                    id="Rectangle_115_A11_Rectangle_46" 
-                                                    rx="0" ry="0" 
-                                                    x="0" y="0" 
-                                                    width="220" height="286"/>
-                                            </svg>
-                                            <a href="script:0">
-                                                <svg className="Rectangle_116_A11_Rectangle_47">
-                                                    <rect fill="rgba(251,251,251,1)" 
-                                                        id="Rectangle_116_A11_Rectangle_47" 
-                                                        rx="8" ry="8" 
-                                                        x="0" y="0" 
-                                                        width="117" height="42"/>
-                                                </svg>
-                                                <div id="Select_A11_Text_41">
-                                                    <span>Select</span>
-                                                </div>
-                                            </a>
-                                            <a href="script:0">
-                                                <svg className="Rectangle_1152">
-                                                    <rect fill="rgba(251,251,251,1)" 
-                                                        id="Rectangle_1152" 
-                                                        rx="8" ry="8" 
-                                                        x="0" y="0" 
-                                                        width="117" height="42"/>
-                                                </svg>
-                                                <div id="Edit">
-                                                    <span>Edit</span>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    )
-                                }
+                            <div className="Repeat_Grid mb-3"
+                                key={item}>
+                                <div className="image-cv">
+                                  <img alt="template" src="/img/Image_4_A11_Rectangle_21_pattern.png"/> 
+                                  <div className="template-hover">
+                                      <div className="d-flex flex-column x-index-5">
+                                        <button type="button" className="btn btn-select">Select</button>
+                                        <button type="button" className="btn btn-select mt-3">Edit</button>
+                                      </div>
+                                  </div>
+                                </div>   
                             </div>
                         );
                     })
                 }
             </div>
-            </>
         );
     }
 
 
 
     renderPageNumerNav = () => {
-        const { selectedPage } = this.props;
-        console.log(selectedPage);
         const arrPageNumber = [...Array(4).keys()];
         return (
-            <>
+            <div className="d-flex justify-content-end mb-3">
                 {
                     arrPageNumber.map((item) => {
                         return (
-                            <a key={item}
-                                href="cript:0">
-                                <svg className={`Rectangle_114${item}`} 
-                                    viewBox="0 0 40 40">
-                                    <path fill="rgba(255,255,255,1)" 
-                                        stroke="rgba(212,212,212,1)" 
-                                        strokeWidth="1px" 
-                                        strokeLinejoin="miter" 
-                                        strokeLinecap="butt" 
-                                        strokeMiterlimit="4" 
-                                        shapeRendering="auto" 
-                                        id="Path_46" 
-                                        d="M 0 0 L 40 0 L 40 40 L 0 40 L 0 20.625 L 0 0 Z"/>
-                                </svg>
-                                {
-                                    selectedPage === item 
-                                    &&
-                                    (
-                                        <svg className={`Rectangle_114${item}`}>
-                                            <rect fill="rgba(74,71,71,1)" 
-                                                id={`Rectangle_114${item}`} 
-                                                rx="0" ry="0" 
-                                                x="0" y="0" 
-                                                width="40" height="40"/>
-                                        </svg>
-                                    )
-                                }
-                                <div id={`ID${item + 1}`}>
-                                    <span>{item + 1}</span>
-                                </div>
+                            <a className="btn-page-number" 
+                                href="script:0">
+                                    {item}
                             </a>
                         );
                     })
                 }
-                <a href="script:0">
-                    <svg className="Path_46" 
-                        viewBox="0 0 40 40">
-                        <path fill="rgba(255,255,255,1)" 
-                            stroke="rgba(212,212,212,1)" 
-                            strokeWidth="1px" 
-                            strokeLinejoin="miter" 
-                            strokeLinecap="butt" 
-                            strokeMiterlimit="4" 
-                            shapeRendering="auto" 
-                            id="Path_46" 
-                            d="M 0 0 L 40 0 L 40 40 L 0 40 L 0 20.625 L 0 0 Z"/>
-                    </svg>
-                    <div id="_">
-                        <span>&gt;</span>
-                    </div>
+                <a className="btn-page-number btn-page-number-end" 
+                    href="script:0">
+                        >
                 </a>
-            </>
+            </div>
         );
     }
+    
 
     render() {
         return (
-            <>
-                <div id="My_template_s">
-                    <span>My templates</span>
-                </div>
-                <svg className="Line_11_A11_Line_2" 
-                    viewBox="0 0 331 2">
-                    <path fill="transparent" 
-                        stroke="rgba(112,112,112,1)" 
-                        strokeWidth="1px" 
-                        strokeLinejoin="miter" 
-                        strokeLinecap="butt" 
-                        strokeMiterlimit="4" 
-                        shapeRendering="auto" 
-                        id="Line_11_A11_Line_2" d="M 0 2 L 331 0"/>
-                </svg>
-                
-                <a href="script:0">
-                    <svg className="Rectangle_1148">
-                        <rect fill="rgba(90,189,255,1)" 
-                            id="Rectangle_1148" 
-                            rx="8" ry="8" 
-                            x="0" y="0" width="91" height="55"/>
-                    </svg>
-                    <div id="Add_">
-                        <span>Add </span>
+            <div className="default-template mt-3">
+                <div className="default-template--header">
+                    <div id="Default_Templates">
+                        <span>My Templates</span>
                     </div>
-                </a>
-
-                { 
-                    this.renderTemplates()
-                }
-                {
-                    this.renderPageNumerNav()
-                }
-            </>
+                    <a role="button" href="script:0" className="btn p-1 mb-2">
+                        <div className="d-flex flex-column">
+                            <div id="All">
+                                <span>All</span>
+                            </div>
+                            <svg className="ic_trending_flat_24px" viewBox="3 8 45.206 10.896">
+                                <path fill="rgba(90,189,255,1)" id="ic_trending_flat_24px" d="M 48.2059326171875 13.4481201171875 L 38.68889236450195 8 L 38.68889236450195 12.08609008789063 L 2.999999523162842 12.08609008789063 L 2.999999523162842 14.81015014648438 L 38.68889236450195 14.81015014648438 L 38.68889236450195 18.896240234375 L 48.2059326171875 13.4481201171875 Z"/>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+                { this.renderTemplates() }
+                { this.renderPageNumerNav() }
+            </div>
         );
     }
     
