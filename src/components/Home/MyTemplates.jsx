@@ -5,7 +5,7 @@ class MyTemplates extends Component {
     renderTemplates = () => {
         const templates = [...Array(8).keys()]
         return (
-            <div className="d-flex flex-wrap justify-content-around">
+            <div className="d-flex flex-wrap justify-content-between">
                 {
                     templates.map((item) => {
                         return (

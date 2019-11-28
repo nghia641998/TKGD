@@ -4,24 +4,44 @@ class TemplatesCategories extends Component {
     test = {  }
 
     renderCategories = () => {
-        const row = [...Array(2).keys()];
-        const col = [...Array(3).keys()];
-        const text = [
-            [ 'IT - Software', 'Marketing', 'Sales'],
-            [ 'Education', 'Banking', 'Design']
-        ];
+        const categories = [
+          {
+            text: "Graphics & Design",
+            image: "https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/graphics-design.d32a2f8.svg"
+          },{
+            text: "Digital Marketing",
+            image: "https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/online-marketing.74e221b.svg"
+          },{
+            text: "Writing & Translation",
+            image: "https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/writing-translation.32ebe2e.svg"
+          },{
+            text: "Video & Animation",
+            image: "https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/video-animation.f0d9d71.svg"
+          },{
+            text: "Music & Audio",
+            image: "https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/music-audio.320af20.svg"
+          },{
+            text: "Programming & Tech",
+            image: "https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/programming.9362366.svg"
+          },{
+            text: "Business",
+            image: "https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/business.bbdf319.svg"
+          },{
+            text: "Lifestyle",
+            image: "https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/lifestyle.745b575.svg"
+          },
+        ]
 
         return (
-            <div className="d-flex flex-wrap justify-content-around">
+            <div className="d-flex flex-wrap justify-content-between">
                 {
-                    row.map((item1) => {
-                        return col.map((item2) => {
+                    categories.map((item) => {
                             return (
-                                <a className="btn btn-secondary category-item mb-3" href="/" key={item2 + item1}>
-                                {text[item1][item2]}
+                                <a className=" category-item mb-3" href="/" key={item.text}>
+                                  <img src={item.image} alt={item.text}/>
+                                  <div>{item.text}</div>
                                 </a>
                             );
-                        })
                     })
                 }
             </div>
@@ -32,19 +52,12 @@ class TemplatesCategories extends Component {
         return (  
             <div className="default-template mt-3">
             <div className="header--underline">
-                        <span>Templates Categories</span>
+                    <span>Templates Categories</span>
                     </div>
                 <div className="default-template--header flex-end">
-                    
-                    <a role="button" href="script:0" className="btn p-1 mb-2">
-                        <div className="d-flex flex-column">
-                            <div id="All">
-                                <span>All</span>
-                            </div>
-                            <svg className="ic_trending_flat_24px" viewBox="3 8 45.206 10.896">
-                                <path fill="rgba(90,189,255,1)" id="ic_trending_flat_24px" d="M 48.2059326171875 13.4481201171875 L 38.68889236450195 8 L 38.68889236450195 12.08609008789063 L 2.999999523162842 12.08609008789063 L 2.999999523162842 14.81015014648438 L 38.68889236450195 14.81015014648438 L 38.68889236450195 18.896240234375 L 48.2059326171875 13.4481201171875 Z"/>
-                            </svg>
-                        </div>
+                  
+                  <a  href="script:0" className="btn see-more">
+                       See More &gt;
                   </a>
                 </div>
                 { this.renderCategories() } 

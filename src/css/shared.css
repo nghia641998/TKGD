@@ -34,15 +34,16 @@
 .header-active {
   position: relative;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 20px!important;
 }
 .header-active::before {
   position: absolute;
-  width: 383.005px;
+  width: 100.005px;
   height: 1px;
-    top: 64px;
-    content: "";
-    background-color: #b3b3b3;
+  top: 34px;
+  left: -6px;
+  content: "";
+  background-color: #b3b3b3;
 }
 
 .sepreate {
