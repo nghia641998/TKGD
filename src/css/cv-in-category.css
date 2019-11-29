@@ -37,11 +37,18 @@
 }
 
 .rotate-focus {
+    line-height: 22px;
     transition-duration: 0.2s;
-
 }
 
 .dropdown-toggle[aria-expanded="true"] .rotate-focus {
     transform: rotate(-180deg);
+}
+
+.result{
+    height: 30px;
+    line-height: 45px;
+    font-size: 20px;
+
 }
 

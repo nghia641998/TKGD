@@ -5,7 +5,7 @@ import Home from './Home/Home';
 import Header from './shared/Header';
 import Footer from './shared/Footer';
 import '../css/shared.css';
-import CVInCategory from './OtherCVCategories/CVInCategory';
+import CVInCategory from '../container/OtherCVCategories/CVIncategory';
 
 const App = () => {
   return (

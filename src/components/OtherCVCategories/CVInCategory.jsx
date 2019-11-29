@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
+//import ScriptTag from 'react-script-tag';
 
 import '../../css/cv-in-category.css';
+import SortOption from '../../container/OtherCVCategories/SortOption';
 
 class CVInCategory extends Component {
 
@@ -26,7 +28,8 @@ class CVInCategory extends Component {
     }
 
     renderPositionTags = () => {
-        const { category, sub } = this.props.match.params;
+        const { match } = this.props;
+        const { category, sub } = match.params;
         const arrPosition = [
             'all', 'web developer', 'app developer', 'mobile devoloper',
             'php developer', 'react developer', 'developer'
@@ -62,14 +65,16 @@ class CVInCategory extends Component {
                 {
                     arrFilterOption.map(item => {
                         return (
-                            <div className="btn-group">
+                            <div className="btn-group"
+                                key={item}>
                                 <button type="button" 
                                     className="btn btn-sm btn-outline-secondary dropdown-toggle m-1 btn-toggle-custom" 
                                     data-toggle="dropdown" >
-                                    {item}<i class="fas fa-chevron-down ml-2 rotate-focus"/>
+                                    {item}<i className="fas fa-chevron-down ml-2 rotate-focus"/>
                                 </button>
                                 <div className="dropdown-menu" 
-                                    onClick={(event) => {event.stopPropagation()}}>
+                                    role="button"
+                                    onClick={(event) => event.stopPropagation()}>
                                     <form >
                                         <div className="pl-1">
                                             <input className="" type="checkbox" id={item}/>
@@ -86,15 +91,18 @@ class CVInCategory extends Component {
     }
 
     renderPageNumerNav = () => {
-        const selectedPage  = 0;
+        const { selectedPageNumber, setSelectedPageNumber }  = this.props;
         const arrPageNumber = [...Array(4).keys()];
         return (
-            <div className="d-flex justify-content-end mb-5 mt-4 w-75">
+            <div className="d-flex justify-content-end mb-5 mt-4 w-100">
                 {
                     arrPageNumber.map((item) => {
                         return (
-                            <a className={`btn-page-number ${item === selectedPage && 'btn-page-number-selected'}`} 
-                                href="script:0">
+                            <a className={`btn-page-number ${item === selectedPageNumber && 'btn-page-number-selected'}`} 
+                                href="script:0"
+                                role="button"
+                                onClick={() => setSelectedPageNumber(item)}
+                                key={item}>
                                     {item + 1}
                             </a>
                         );
@@ -109,7 +117,8 @@ class CVInCategory extends Component {
     }
 
     renderListCV = () => {
-        const { category, sub }= this.props.match.params;
+        const { match, numberOfCV } = this.props;
+        const { category, sub }= match.params;
         const templates = [...Array(10).keys()];
         return (
             <>
@@ -117,8 +126,13 @@ class CVInCategory extends Component {
                     <h4>{`Result for "${sub}" in "${category}"`}</h4>
                 </div>
                 { this.renderFilterOption() }
-                <div className="d-flex flex-column align-items-center">
-                    <div className="d-flex flex-wrap w-75">
+                <div className="d-flex flex-column align-items-center pl-5 pr-5">
+                    <div className="w-100">
+                        <div className="float-left result">{numberOfCV} results</div>
+                        <SortOption/>
+                    </div>
+                    
+                    <div className="d-flex flex-wrap justify-content-center">
                         {
                             templates.map((item) => {
                                 return (
@@ -147,11 +161,14 @@ class CVInCategory extends Component {
 
     render() {
         return (
-            <div className="Other_CV_s___Categories">
-                { this.renderHeader() }
-                { this.renderPositionTags() }
-                { this.renderListCV() }
-            </div>
+            <>
+                <div className="Other_CV_s___Categories">
+                    { this.renderHeader() }
+                    { this.renderPositionTags() }
+                    { this.renderListCV() }
+                </div>
+                {/* <ScriptTag src="/js/cv-in-category.js" type="text/javascript"/> */}
+            </>
         );
     }
 }
