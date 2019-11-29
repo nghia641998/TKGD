@@ -1,0 +1,47 @@
+#Other_CV_s___Categories {
+    width: 100%;
+}
+
+.header{
+    padding-top: 90px;
+}
+
+.header-menu-item{
+    color: #8f8f8f;
+
+}
+
+.header-menu-item:hover{
+    color: #8f8f8f;
+    text-decoration: none;
+}
+
+.position-tags {
+    background-color: #eeeeee;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #d5d5d5;
+}
+.position-tag {
+    font-size: 12px;
+    background-color: white;
+}
+.tag-selected {
+    background-color: #4a4747;
+    border-color: #4a4747;
+    color: white;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.rotate-focus {
+    transition-duration: 0.2s;
+
+}
+
+.dropdown-toggle[aria-expanded="true"] .rotate-focus {
+    transform: rotate(-180deg);
+}
+

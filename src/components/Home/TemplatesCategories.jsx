@@ -17,7 +17,8 @@ class TemplatesCategories extends Component {
                     row.map((item1) => {
                         return col.map((item2) => {
                             return (
-                                <a className="btn btn-secondary category-item mb-3" href="/" key={item2 + item1}>
+                                <a className="btn btn-secondary category-item mb-3" 
+                                    href={`/category/${text[item1][item2]}/all`} key={item2 + item1}>
                                 {text[item1][item2]}
                                 </a>
                             );
