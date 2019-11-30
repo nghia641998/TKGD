@@ -1,6 +1,7 @@
-confirm('123123');
+console.log($("#close"))
 
-$("#sort").click(function(e){
-    e.stopPropagation();
-})
+$("button#close").on('click', () => {
+    const temp = $(".custom-dropdown-menu");
 
+    console.log($("button#close").parent);
+});

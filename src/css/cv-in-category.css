@@ -40,15 +40,30 @@
     line-height: 22px;
     transition-duration: 0.2s;
 }
-
 .dropdown-toggle[aria-expanded="true"] .rotate-focus {
     transform: rotate(-180deg);
 }
-
 .result{
     height: 30px;
     line-height: 45px;
     font-size: 20px;
-
 }
-
+.custom-dropdown-menu {
+    width: 200px;
+    padding: 10px 20px;
+}
+.custom-btn-link{
+    width: auto;
+    padding: 0px;
+    color: #b2b2b2;
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.custom-btn-link:hover {
+    text-decoration: none;
+    color: #4a4747;
+}
+.custom-btn-link:focus {
+    text-decoration: none;
+}

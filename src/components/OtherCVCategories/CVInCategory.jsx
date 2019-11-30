@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-//import ScriptTag from 'react-script-tag';
+import ScriptTag from 'react-script-tag';
 
 import '../../css/cv-in-category.css';
 import SortOption from '../../container/OtherCVCategories/SortOption';
@@ -67,25 +67,52 @@ class CVInCategory extends Component {
                         return (
                             <div className="btn-group"
                                 key={item}>
-                                <button type="button" 
+                                <button ref="test" type="button" 
                                     className="btn btn-sm btn-outline-secondary dropdown-toggle m-1 btn-toggle-custom" 
-                                    data-toggle="dropdown" >
+                                    data-toggle="dropdown" 
+                                    aria-haspopup="true" 
+                                    aria-expanded="false">
                                     {item}<i className="fas fa-chevron-down ml-2 rotate-focus"/>
                                 </button>
-                                <div className="dropdown-menu" 
-                                    role="button"
-                                    onClick={(event) => event.stopPropagation()}>
-                                    <form >
-                                        <div className="pl-1">
-                                            <input className="" type="checkbox" id={item}/>
-                                            <label htmlFor={item}>test test</label>
-                                        </div>
-                                    </form>
+                                <div className="dropdown-menu custom-dropdown-menu" >
+                                    <div className="custom-control custom-checkbox">
+                                        <input type="checkbox" className="custom-control-input" id={`${item}_PHP`}/>
+                                        <label className="custom-control-label" htmlFor={`${item}_PHP`}>PHP</label>
+                                    </div>
+                                    <div className="custom-control custom-checkbox">
+                                        <input type="checkbox" className="custom-control-input" id={`${item}_JavaScipt`}/>
+                                        <label className="custom-control-label" htmlFor={`${item}_JavaScipt`}>JavaScipt</label>
+                                    </div>
+                                    <div className="custom-control custom-checkbox">
+                                        <input type="checkbox" className="custom-control-input" id={`${item}_React`}/>
+                                        <label className="custom-control-label" htmlFor={`${item}_React`}>React</label>
+                                    </div>
+                                    <div className="custom-control custom-checkbox">
+                                        <input type="checkbox" className="custom-control-input" id={`${item}_Angular`}/>
+                                        <label className="custom-control-label" htmlFor={`${item}_Angular`}>Angular</label>
+                                    </div>
+                                    <div className="custom-control custom-checkbox">
+                                        <input type="checkbox" className="custom-control-input" id={`${item}_VueJS`}/>
+                                        <label className="custom-control-label" htmlFor={`${item}_VueJS`}>VueJS</label>
+                                    </div>
+                                    <div className="dropdown-divider"/>
+                                    <div className="d-flex flex-wrap justify-content-between">
+                                        <button className="btn btn-link custom-btn-link" 
+                                            type="button">
+                                            Clear All
+                                        </button>
+                                        <button className="btn btn-link custom-btn-link" 
+                                            type="button"
+                                            id="Close">
+                                            Close
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         );
                     })
                 }
+                
             </div>
         );
     }
