@@ -34,11 +34,11 @@ class MyTemplates extends Component {
         const { selectedPage } = this.props;
         const arrPageNumber = [...Array(4).keys()];
         return (
-            <div className="d-flex justify-content-end mb-5 mt-4">
+            <div  className="d-flex justify-content-end mb-5 mt-4">
                 {
                     arrPageNumber.map((item) => {
                         return (
-                            <a className={`btn-page-number ${item === selectedPage && 'btn-page-number-selected'}`} 
+                            <a key={item} className={`btn-page-number ${item === selectedPage && 'btn-page-number-selected'}`} 
                                 href="script:0">
                                     {item + 1}
                             </a>
