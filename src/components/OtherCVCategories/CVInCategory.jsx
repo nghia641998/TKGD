@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 import '../../css/cv-in-category.css';
 import SortOption from '../../container/OtherCVCategories/SortOption';
@@ -174,8 +174,12 @@ class CVInCategory extends Component {
                                         <img alt="template" src="/img/Image_4_A11_Rectangle_21_pattern.png"/> 
                                         <div className="template-hover">
                                             <div className="d-flex flex-column x-index-5">
+                                                <Link to="/create-cv">
                                                 <button type="button" className="btn btn-select">Select</button>
+                                                </Link>
+                                                <Link to="/create-cv">
                                                 <button type="button" className="btn btn-select mt-3">Edit</button>
+                                                </Link>
                                             </div>
                                         </div>
                                         </div>   

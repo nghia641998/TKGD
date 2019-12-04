@@ -26,6 +26,9 @@ const App = () => {
           <Route exact path="/category">
             <OtherCV/>
           </Route>
+          <Route exact path="/template-category">
+            <TemplateCategories/>
+          </Route>
           <Route exact path="/template-category/:category">
             <TemplateCategories/>
           </Route>

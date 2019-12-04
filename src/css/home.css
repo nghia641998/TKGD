@@ -233,7 +233,9 @@
   background: gray;
   opacity: 0.4;
 }
-
+.template-hover a{
+  z-index: 99;
+}
 .btn-select {
   background: white;
   z-index: 99;

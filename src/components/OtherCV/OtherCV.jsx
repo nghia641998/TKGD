@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Link} from 'react-router-dom';
 import './OtherCV.scss';
 
 class OtherCV extends React.Component {
@@ -54,13 +54,22 @@ class OtherCV extends React.Component {
                   />
                 </div>
               </div>
-              <button type="button" className="btn btn-search">Search</button>
+              <Link to="/category/all/all" className="btn btn-search">
+              Search
+              </Link>
+              
             </div>
             <div className="hash-tag">
               <div>Popular: </div>
-              <button type="button" className="btn btn-outline-secondary">Developer</button>
-              <button type="button" className="btn btn-outline-secondary">React</button>
-              <button type="button" className="btn btn-outline-secondary">Angular</button>
+              <Link to="/category/all/all" className="btn btn-outline-secondary">
+                Developer
+              </Link>
+              <Link to="/category/all/all" className="btn btn-outline-secondary">
+              React
+              </Link>
+              <Link to="/category/all/all" className="btn btn-outline-secondary">
+              Angular
+              </Link>
             </div>
             <div className={isShowModal ? 'search-cv active' : 'search-cv'}>
               <div className='modal-body add-title-modal'>
@@ -116,7 +125,10 @@ class OtherCV extends React.Component {
                   <img alt="template" src="/img/Image_4_A11_Rectangle_21_pattern.png" />
                   <div className="template-hover">
                     <div className="d-flex flex-column x-index-5">
+                      <Link to="create-cv">
                       <button type="button" className="btn btn-select">Select</button>
+                      </Link>
+                      
                     </div>
                   </div>
                 </div>

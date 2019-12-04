@@ -3,11 +3,10 @@ import { Link } from "react-router-dom";
 import History from "../../util/history";
 
 const Header = () => {
-  const [path, setPath] = useState('/');
-  const [visible, setVisible] = useState(true);
+  const [path, setPath] = useState(window.location.pathname);
+  const [visible, setVisible] = useState(window.location.pathname !== '/' && window.location.pathname !== '/category');
 
   History.listen(location => {
-    console.log('listen history',location);
     setPath(location.pathname);
     if(location.pathname === '/' || location.pathname === '/category'){
       setVisible(false);
@@ -15,7 +14,6 @@ const Header = () => {
   });
 
   const handleScroll = () => {
-    console.log('path', path)
     if(path !== '/' && path !== '/category')
       return setVisible(true);
 

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from "react-router-dom";
 
 class DefaultTemplates extends Component {
     
@@ -15,9 +16,12 @@ class DefaultTemplates extends Component {
                                 <div className="image-cv">
                                   <img alt="template" src="/img/Image_4_A11_Rectangle_21_pattern.png"/> 
                                   <div className="template-hover">
-                                      <button type="button" className="btn btn-select">
-                                          <span>Select</span>
-                                      </button>
+                                      
+                                          <Link to="/create-cv">
+                                          <button type="button" className="btn btn-select"><span>Select</span> </button>
+                                          </Link>
+                                          
+                                     
                                   </div>
                                 </div>                                
                             </div>
@@ -35,9 +39,9 @@ class DefaultTemplates extends Component {
                     <span>Default Templates</span>
                     </div>
                 <div className="default-template--header flex-end">
-                  <a  href="script:0" className="btn see-more">
+                  <Link to="template-category"  href="script:0" className="btn see-more">
                        See More &gt;
-                  </a>
+                  </Link>
                 </div>
                 { this.renderCVTemplates() }
             </div>
