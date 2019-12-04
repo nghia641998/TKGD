@@ -13,17 +13,17 @@ const Header = () => {
     }
   });
 
-  const handleScroll = () => {
-    if(path !== '/' && path !== '/category')
-      return setVisible(true);
-
-    const currentScrollPos = window.pageYOffset;
-    const _visible = currentScrollPos > document.querySelector('.Header').offsetHeight;
-
-    setVisible(_visible)
-  };
-
   useEffect(() => {
+    const handleScroll = () => {
+      if(path !== '/' && path !== '/category')
+        return setVisible(true);
+  
+      const currentScrollPos = window.pageYOffset;
+      const _visible = currentScrollPos > document.querySelector('.Header').offsetHeight;
+  
+      setVisible(_visible)
+    };
+
     window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
