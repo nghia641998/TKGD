@@ -5,7 +5,7 @@ class MyTemplates extends Component {
     renderTemplates = () => {
         const templates = [...Array(8).keys()]
         return (
-            <div className="d-flex flex-wrap justify-content-between">
+            <div className="d-flex flex-wrap justify-content-start">
                 {
                     templates.map((item) => {
                         return (
@@ -59,7 +59,7 @@ class MyTemplates extends Component {
             <div className="default-template mt-3">
                 <div className="header--underline">
                     <span>My Templates</span>
-                    </div>
+                </div>
                 <div className="default-template--header flex-end">
                     
                     <button type="button" className="btn btn--add">Add</button>

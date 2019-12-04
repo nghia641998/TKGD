@@ -4,23 +4,38 @@ import history from '../util/history';
 import Home from './Home/Home';
 import Header from './shared/Header';
 import Footer from './shared/Footer';
-import '../css/shared.css';
+import '../css/shared.scss';
+import CVInCategory from '../container/OtherCVCategories/CVIncategory';
+import CreateCV from './CreateCV/CreateCV';
+import OtherCV from './OtherCV/OtherCV';
+import TemplateCategories from './TemplateCategories/TemplateCategories';
 
 const App = () => {
   return (
     <div className="App">
-      <Header/>
+      
       <Router history={history}>
+        <Header/>
         <Switch>
           <Route exact path="/">
             <Home/>
           </Route>
-          {/* <Route exact path="/test">
-            <div>456456 <button type="button" onClick={() => {history.push('/')}}>test</button></div>
-          </Route> */}
+          <Route exact path="/create-cv">
+            <CreateCV/>
+          </Route>
+          <Route exact path="/category">
+            <OtherCV/>
+          </Route>
+          <Route exact path="/template-category/:category">
+            <TemplateCategories/>
+          </Route>
+          <Route exact path="/category/:category/:sub">
+            <CVInCategory/>
+          </Route>
         </Switch>
+        <Footer/>
       </Router>
-      <Footer/>
+      
     </div>
   );
 }

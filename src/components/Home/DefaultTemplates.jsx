@@ -6,7 +6,7 @@ class DefaultTemplates extends Component {
         const arrTemp = [...Array(4).keys()];
 
         return(
-            <div className="d-flex flex-wrap justify-content-between">
+            <div className="d-flex flex-wrap justify-content-start">
                 {
                     arrTemp.map((item) => {
                         return (

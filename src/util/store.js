@@ -3,13 +3,15 @@ import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 
 import CVTemplate  from '../reducer/CVTemplate';
+import CVInCategory from '../reducer/CVInCategory';
 
 // eslint-disable-next-line import/imports-first
 import 'babel-polyfill';
 
 const Store = createStore(
     combineReducers({ 
-        CVTemplate
+        CVTemplate,
+        CVInCategory
     }),
     applyMiddleware(logger, thunk)
 );

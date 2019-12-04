@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Temp Cat</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <style>
+        .image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.containerCV:hover .image {
+  opacity: 0.8;
+}
+
+.containerCV:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+    }
+.mybtn {
+    background-color: white;
+    width: 100px;
+    margin-bottom: 10px;
+}
+.mybtn:hover{
+    color: black;
+}
+.needHover:hover {
+    cursor: pointer;
+}
+    </style>
+    </head>
+    <body>
+        <!-- Modal -->
+
+        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+                        <div class="modal-header">
+                                        <h5 class="modal-title">Template Name</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                        </button>
+                                      </div>
+                                      <div class="modal-body">
+                                              <div class="container" style="display: flex; justify-content: center;">
+                                                        <img src="CVpreview.png"/>
+                                              </div>
+                                                
+                                      </div>
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary">Use this template</button>
+                                        <button type="button" class="btn btn-secondary">Duplicate template</button>
+                                      </div>
+        </div>
+        </div>
+        </div>
+        <div class="container mt-4">
+            <div class="row">
+                <div class="container-fluid" style="display: flex; justify-content: space-between; margin-left: 3%; margin-right: 3%;">
+                    <span style="display: inline-flex;">
+                            <h5 style="font-weight: normal; font-style: italic;">1-9 of over 23 results for</h5>
+                            <h5>"IT - Software"</h5>
+                    </span>
+                    <span style="display: inline-flex;">
+                            <h5 style="font-weight: normal; font-style: italic; margin-right: 20px;">Sort by</h5>
+                            <h5>"IT - Software"</h5>
+                            <div class="btn-group">
+                                    <button data-toggle="dropdown" style="background: transparent; border: none; outline: none;" class="needHover">
+                                        <i class="fa fa-angle-down fa-2x" aria-hidden="true"></i>
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                      <button class="dropdown-item" type="button">Name</button>
+                                      <button class="dropdown-item" type="button">Publication date</button>
+                                    </div>
+                            </div>
+                    </span>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-sm-3">
+                        <div class="container-fluid">
+                                <div class="list-group">
+                                        <a href="#" class="list-group-item list-group-item-action" style="border: none;">All (63)</a>
+                                        <a href="#" class="list-group-item list-group-item-action" style="border: none; font-weight: bold;">IT - Software (23)</a>
+                                        <a href="#" class="list-group-item list-group-item-action" style="border: none;">Marketing (5)</a>
+                                        <a href="#" class="list-group-item list-group-item-action" style="border: none;">Sales (5)</a>
+                                        <a href="#" class="list-group-item list-group-item-action" style="border: none;">Education (10)</a>
+                                        <a href="#" class="list-group-item list-group-item-action" style="border: none;">Banking (10)</a>
+                                        <a href="#" class="list-group-item list-group-item-action" style="border: none;">Design (10)</a>
+                                </div>
+                        </div>
+                </div>
+                <div class="col-sm-9 border-left">
+                    <div class="container">
+                            <div class="row ml-3 mb-4">
+                                    <div class="col-sm-4">
+                                            <div class="containerCV" style="width: 220px; background-color: black;">
+                                                    <img src="cv.png" alt="" class="image" >
+                                                    <div class="middle">
+                                                        <div>
+                                                                <button type="button" data-toggle="modal" data-target=".bd-example-modal-lg" class="btn btn-outline-secondary mybtn">Preview</button>
+                                                        </div>
+                                                        <div>
+                                                                <button type="button" class="btn btn-outline-secondary mybtn">Select</button>
+                                                        </div>
+                                                        <div>
+                                                                <button type="button" class="btn btn-outline-secondary mybtn">Duplicate</button>
+                                                        </div>
+                                                       
+                                                    </div>
+                                                  </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                            <div class="containerCV" style="width: 220px; background-color: black;">
+                                                    <img src="cv.png" alt="" class="image" >
+                                                    <div class="middle">
+                                                        <div>
+                                                                <button type="button" class="btn btn-outline-secondary mybtn" data-toggle="modal" data-target=".bd-example-modal-lg">Preview</button>
+                                                        </div>
+                                                        <div>
+                                                                <button type="button" class="btn btn-outline-secondary mybtn">Select</button>
+                                                        </div>
+                                                        <div>
+                                                                <button type="button" class="btn btn-outline-secondary mybtn">Duplicate</button>
+                                                        </div>
+                                                       
+                                                    </div>
+                                                  </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                            <div class="containerCV" style="width: 220px; background-color: black;">
+                                                    <img src="cv.png" alt="" class="image" >
+                                                    <div class="middle">
+                                                        <div>
+                                                                <button type="button" class="btn btn-outline-secondary mybtn" data-toggle="modal" data-target=".bd-example-modal-lg">Preview </button>
+                                                        </div>
+                                                        <div>
+                                                                <button type="button" class="btn btn-outline-secondary mybtn">Select</button>
+                                                        </div>
+                                                        <div>
+                                                                <button type="button" class="btn btn-outline-secondary mybtn">Duplicate</button>
+                                                        </div>
+                                                       
+                                                    </div>
+                                                  </div>
+                                    </div>
+                                    
+                            </div>
+                            <div class="row ml-3 mb-4">
+                                    <div class="col-sm-4">
+                                            <div class="containerCV" style="width: 220px; background-color: black;">
+                                                    <img src="cv.png" alt="" class="image" >
+                                                    <div class="middle">
+                                                        <div>
+                                                                <button type="button" class="btn btn-outline-secondary mybtn" data-toggle="modal" data-target=".bd-example-modal-lg">Preview</button>
+                                                        </div>
+                                                        <div>
+                                                                <button type="button" class="btn btn-outline-secondary mybtn">Select</button>
+                                                        </div>
+                                                        <div>
+                                                                <button type="button" class="btn btn-outline-secondary mybtn">Duplicate</button>
+                                                        </div>
+                                                       
+                                                    </div>
+                                                  </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                            <div class="containerCV" style="width: 220px; background-color: black;">
+                                                    <img src="cv.png" alt="" class="image" >
+                                                    <div class="middle">
+                                                        <div>
+                                                                <button type="button" class="btn btn-outline-secondary mybtn" data-toggle="modal" data-target=".bd-example-modal-lg">Preview</button>
+                                                        </div>
+                                                        <div>
+                                                                <button type="button" class="btn btn-outline-secondary mybtn">Select</button>
+                                                        </div>
+                                                        <div>
+                                                                <button type="button" class="btn btn-outline-secondary mybtn">Duplicate</button>
+                                                        </div>
+                                                       
+                                                    </div>
+                                                  </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                            <div class="containerCV" style="width: 220px; background-color: black;">
+                                                    <img src="cv.png" alt="" class="image" >
+                                                    <div class="middle">
+                                                        <div>
+                                                                <button type="button" class="btn btn-outline-secondary mybtn" data-toggle="modal" data-target=".bd-example-modal-lg">Preview</button>
+                                                        </div>
+                                                        <div>
+                                                                <button type="button" class="btn btn-outline-secondary mybtn">Select</button>
+                                                        </div>
+                                                        <div>
+                                                                <button type="button" class="btn btn-outline-secondary mybtn">Duplicate</button>
+                                                        </div>
+                                                       
+                                                    </div>
+                                                  </div>
+                                    </div>
+                                    
+                            </div>
+                            <div class="row ml-3 mb-4">
+                                    <div class="col-sm-4">
+                                            <div class="containerCV" style="width: 220px; background-color: black;">
+                                                    <img src="cv.png" alt="" class="image" >
+                                                    <div class="middle">
+                                                        <div>
+                                                                <button type="button" class="btn btn-outline-secondary mybtn" data-toggle="modal" data-target=".bd-example-modal-lg">Preview</button>
+                                                        </div>
+                                                        <div>
+                                                                <button type="button" class="btn btn-outline-secondary mybtn">Select</button>
+                                                        </div>
+                                                        <div>
+                                                                <button type="button" class="btn btn-outline-secondary mybtn">Duplicate</button>
+                                                        </div>
+                                                       
+                                                    </div>
+                                                  </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                            <div class="containerCV" style="width: 220px; background-color: black;">
+                                                    <img src="cv.png" alt="" class="image" >
+                                                    <div class="middle">
+                                                        <div>
+                                                                <button type="button" class="btn btn-outline-secondary mybtn" data-toggle="modal" data-target=".bd-example-modal-lg">Preview</button>
+                                                        </div>
+                                                        <div>
+                                                                <button type="button" class="btn btn-outline-secondary mybtn">Select</button>
+                                                        </div>
+                                                        <div>
+                                                                <button type="button" class="btn btn-outline-secondary mybtn">Duplicate</button>
+                                                        </div>
+                                                       
+                                                    </div>
+                                                  </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                            <div class="containerCV" style="width: 220px; background-color: black;">
+                                                    <img src="cv.png" alt="" class="image" >
+                                                    <div class="middle">
+                                                        <div>
+                                                                <button type="button" class="btn btn-outline-secondary mybtn" data-toggle="modal" data-target=".bd-example-modal-lg">Preview</button>
+                                                        </div>
+                                                        <div>
+                                                                <button type="button" class="btn btn-outline-secondary mybtn">Select</button>
+                                                        </div>
+                                                        <div>
+                                                                <button type="button" class="btn btn-outline-secondary mybtn">Duplicate</button>
+                                                        </div>
+                                                       
+                                                    </div>
+                                                  </div>
+                                    </div>
+                                    
+                            </div>
+                            <nav aria-label="Page navigation example">
+                                    <ul class="pagination justify-content-center">
+                                      <li class="page-item disabled">
+                                        <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                      </li>
+                                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                      <li class="page-item">
+                                        <a class="page-link" href="#">Next</a>
+                                      </li>
+                                    </ul>
+                            </nav>
+                    </div>
+                    
+                </div>
+            </div>
+            </div>
+    </body>
+</html>

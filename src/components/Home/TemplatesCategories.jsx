@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from "react-router-dom";
 
 class TemplatesCategories extends Component {
     test = {  }
@@ -37,10 +38,11 @@ class TemplatesCategories extends Component {
                 {
                     categories.map((item) => {
                             return (
-                                <a className=" category-item mb-3" href="/" key={item.text}>
+                                <Link className=" category-item mb-3" 
+                                to={`/template-category/${item.text}`}  key={item.text}>
                                   <img src={item.image} alt={item.text}/>
                                   <div>{item.text}</div>
-                                </a>
+                                </Link>
                             );
                     })
                 }
@@ -56,9 +58,9 @@ class TemplatesCategories extends Component {
                     </div>
                 <div className="default-template--header flex-end">
                   
-                  <a  href="script:0" className="btn see-more">
+                  <Link  to="/template-category" className="btn see-more">
                        See More &gt;
-                  </a>
+                  </Link>
                 </div>
                 { this.renderCategories() } 
             </div>

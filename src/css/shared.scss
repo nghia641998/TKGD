@@ -7,7 +7,7 @@
   z-index: 999;
   background: white;
   box-shadow: 1px 3px 5px #80808069;
-  padding: 0 24px;
+  padding: 0 46px;
 }
 
 .header-right {
@@ -17,19 +17,28 @@
 
 .Header-left {
   font-size: 40px;
-  padding: 10px 0;
+  padding: 2px 0 10px 0;
   margin-left: 20px;
   font-weight: 700;
   color: #23238b;
 }
-
-.header-right > div:not(.sepreate){
+.Header-left:hover{
+  text-decoration: none;
+  color: #23238b;
+}
+.header-right  div:not(.sepreate){
   margin: 0px 20px;
   padding-bottom: 5px;
   font-size: 18px;
-  color: #212a32;
+  color: #212a32!important;
   text-align: center;
   cursor: pointer;
+}
+.header-right a{
+  color: #212a32!important;
+}
+.header-right a:hover{
+  text-decoration: none;
 }
 .header-active {
   position: relative;
@@ -168,4 +177,69 @@
 .modal-icon-wrapper + div {
   font-size: 15px;
   color: #4d4b4b;
+}
+
+a:hover {
+  text-decoration: none!important;
+}
+
+.seach-box {
+  display: flex;
+  background: white;
+  width: 360px;
+  height: 46px;
+  border-radius: 8px;
+  align-items: center;
+  margin-top: 12px;
+    margin-left: 40px;
+    border: 1px solid #e0e0e0;
+}
+
+.ic_search_24px {
+  width: 20.582px;
+  height: 20.475px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  margin-left: 26px;
+}
+
+.search-input {
+  overflow: visible;
+  width: 360px;
+  white-space: nowrap;
+  font-family: Segoe UI;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  color: rgba(112, 112, 112, 1);
+  margin-left: 24px;
+  margin-bottom: 6px;
+}
+
+.search-input input{
+  width: 100%;
+  outline: none;
+}
+
+.visible{
+  box-shadow: 0px 0px 5px #80808069;
+  background: white;
+  a,div{
+    color: #212a32!important;
+  }
+}
+.non-visible{
+  box-shadow: none!important;
+  background: transparent!important;
+  .header-right{
+    a,div{
+      color: white!important;
+    }
+    div::before,.sepreate{
+      background: white!important;
+    }
+  }
+  
+  .seach-box{
+    display: none;
+  }
 }

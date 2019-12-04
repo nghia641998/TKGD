@@ -17,14 +17,14 @@
 
 .home-header {
   display: block;
-  height: 95vh;
+  height: 80vh;
   width: 100%;
 
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
 }
 .home-header::before {
   content: "";
@@ -38,7 +38,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
-  opacity: 0.6;
+  opacity: 0.9;
 }
 #Home___Select_template___1 {
   width: 100%;
@@ -64,7 +64,7 @@
   font-weight: bold;
   font-size: 36px;
   color: rgba(239, 239, 239, 1);
-}
+} 
 #Component_2___1 {
   display: flex;
   background: white;
@@ -183,7 +183,8 @@
   flex-wrap: wrap;
 }
 .Repeat_Grid {
-  width: 240px;
+  flex: 0 1 23.4%;
+  margin: 0 8px;
   height: 295px;
 }
 .Image_4 {
@@ -212,7 +213,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 240px;
+  width: 100%;
   height: 295px;
   opacity: 0;
   z-index: -1;
