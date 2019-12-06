@@ -3,7 +3,7 @@ import "./CreateCV.scss";
 
 const CreateCV = () => {
   return (
-    <div className="create-cv">
+    <div className="container-fluid create-cv" style={{backgroundImage: "url('/images/bk.png')", backgroundSize:"cover"}}>
       <div className='container-fluid'>
         <div className='row'>
           <div className='col-sm-1' />
@@ -320,7 +320,7 @@ const CreateCV = () => {
           <div className='col-sm-8 mt-4'>
             <div className='row id_1 border-bottom' style={{height: "250px"}}>
               <div className='col-sm-4'>
-                <img alt="" src='./user_logo.png' className='center' />
+                <img alt="" src="/images/user_logo.png" className='center' />
               </div>
               <div className='col-sm-8' id='id_4'>
                 <input
@@ -538,48 +538,50 @@ const CreateCV = () => {
               </button>
             </div>
           </div>
-          <div className='col-sm-3 mt-4'>
+          <div className='col-sm-3'>
             <div
-              className='container-fluid ml-3 rounded'
+              className='container-fluid ml-3 rounded mt-4'
               style={{background: "white", width: "60%"}}
             >
+              <label style = {{height: "20px"}}>
+              </label>
               <input
-                className='form-control form-control-lg mt-4 mb-4'
+                className='form-control form-control-lg mb-4'
                 type='text'
                 placeholder='CV name'
               />
               <button
                 type='button'
                 className='btn btn-secondary mt-3 mb-3'
-                style={{width: "100%"}}
+                style={{color: "white" ,width: "100%"}}
               >
                 Save
               </button>
               <button
                 type='button'
                 className='btn btn-secondary mt-3 mb-3'
-                style={{width: "100%"}}
+                style={{color: "white" ,width: "100%"}}
               >
                 Publish
               </button>
               <button
                 type='button'
                 className='btn btn-secondary mt-3 mb-3'
-                style={{width: "100%"}}
+                style={{color: "white" ,width: "100%"}}
               >
                 Download PDF
               </button>
               <button
                 type='button'
                 className='btn btn-secondary mt-3 mb-3'
-                style={{width: "100%"}}
+                style={{color: "white" ,width: "100%"}}
               >
                 Export
               </button>
               <button
                 type='button'
                 className='btn btn-secondary mt-3 mb-5'
-                style={{width: "100%"}}
+                style={{color: "white" ,width: "100%"}}
               >
                 Import
               </button>
