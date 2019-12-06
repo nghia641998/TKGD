@@ -222,6 +222,9 @@
   font-weight: 700;
   color: white;
   background-color: rgb(28, 224, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .search-wrapper{
   display: flex;
@@ -265,7 +268,7 @@
   background-color: white;
   box-shadow: 2px 5px #dadada;
   position: absolute;
-  top: 341px;
+  top: 309px;
   border-radius: 5px;
   z-index: 99;
   display: none;
@@ -312,7 +315,9 @@
     color:white;
   }
 }
-
+.hash-tag > * {
+  margin: 0px 5px;
+}
 }
 .non-visible-custom{
   .header-right{
