@@ -4754,6 +4754,29 @@
     background: gray;
     color: white;
   }
+
+  .modal-content{
+    color: #4c4c4c;
+    .modal-header {
+      text-align: center;
+      h4{
+        margin: auto;
+      }
+      .close{
+        display:none;
+      }
+    }
+    button.btn {
+      background: #eaeaea;
+      padding: 12px 0;
+      font-size: 18px;
+      margin: 10px!important;
+      border-radius: 8px;
+  }
+  }
+  .modal-body-content{
+    margin: 4px 0px 16px 0;
+  }
 }
 
 

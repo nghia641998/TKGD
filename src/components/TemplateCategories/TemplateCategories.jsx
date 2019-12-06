@@ -1,5 +1,7 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 import './TemplateCategories.scss';
+import history from '../../util/history';
 
 const TemplateCategories = () => {
 
@@ -19,12 +21,12 @@ const TemplateCategories = () => {
                       <div>
                         <button type="button" className="btn btn-outline-secondary mybtn" data-toggle="modal" data-target=".bd-example-modal-lg">Preview</button>
                       </div>
-                      <div>
+                      <Link to='/cv'>
                         <button type="button" className="btn btn-outline-secondary mybtn">Select</button>
-                      </div>
-                      <div>
+                      </Link>
+                      <Link to='/template'>
                         <button type="button" className="btn btn-outline-secondary mybtn">Duplicate</button>
-                      </div>
+                      </Link>
 
                     </div>
                   </div>
@@ -57,8 +59,11 @@ const TemplateCategories = () => {
 
             </div>
             <div className="modal-footer">
-              <button type="button" className="btn btn-primary">Use this template</button>
-              <button type="button" className="btn btn-secondary">Duplicate template</button>
+              
+              <button onClick={() => history.push('/cv')} data-dismiss="modal" type="button" className="btn btn-primary">Use this template</button>
+              
+              <button onClick={() => history.push('/template')} data-dismiss="modal" type="button" className="btn btn-secondary">Duplicate template</button>
+              
             </div>
           </div>
         </div>

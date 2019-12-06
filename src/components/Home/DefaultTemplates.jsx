@@ -17,7 +17,7 @@ class DefaultTemplates extends Component {
                                   <img alt="template" src="/img/Image_4_A11_Rectangle_21_pattern.png"/> 
                                   <div className="template-hover">
                                       
-                                          <Link to="/create-cv">
+                                          <Link to="/cv">
                                           <button type="button" className="btn btn-select"><span>Select</span> </button>
                                           </Link>
                                           

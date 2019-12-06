@@ -9,6 +9,8 @@ import CVInCategory from '../container/OtherCVCategories/CVIncategory';
 import CreateCV from './CreateCV/CreateCV';
 import OtherCV from './OtherCV/OtherCV';
 import TemplateCategories from './TemplateCategories/TemplateCategories';
+import Template from './Template/Template';
+import ViewCV from './ViewCV/ViewCV';
 
 const App = () => {
   return (
@@ -20,8 +22,14 @@ const App = () => {
           <Route exact path="/">
             <Home/>
           </Route>
-          <Route exact path="/create-cv">
+          <Route exact path="/cv">
             <CreateCV/>
+          </Route>
+          <Route exact path="/cv-detail">
+            <ViewCV/>
+          </Route>
+          <Route exact path="/template">
+            <Template/>
           </Route>
           <Route exact path="/category">
             <OtherCV/>

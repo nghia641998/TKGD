@@ -1,9 +1,7 @@
 import React from "react";
 import {Link} from 'react-router-dom';
-import "./CreateCV.scss";
 
-
-const CreateCV = () => {
+const Template = () => {
   return (
     <div className="container-fluid create-cv" style={{ backgroundImage: "url('/images/bk.png')", backgroundSize: "cover" }}>
       <div className='container-fluid'>
@@ -582,7 +580,7 @@ const CreateCV = () => {
               <input
                 className='form-control form-control-lg mb-4'
                 type='text'
-                placeholder='CV name'
+                placeholder='Template name'
               />
               <button
                 type='button'
@@ -590,13 +588,6 @@ const CreateCV = () => {
                 style={{ color: "white", width: "100%" }}
               >
                 Save
-              </button>
-              <button
-                type='button'
-                className='btn btn-secondary mt-3 mb-3'
-                style={{ color: "white", width: "100%" }}
-              >
-                Publish
               </button>
               <button
                 type='button'
@@ -627,4 +618,4 @@ const CreateCV = () => {
   );
 };
 
-export default CreateCV;
+export default Template;

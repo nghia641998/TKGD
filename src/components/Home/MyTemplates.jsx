@@ -17,10 +17,10 @@ class MyTemplates extends Component {
                   <div className="template-hover">
                     <div className="d-flex flex-column x-index-5">
 
-                      <Link to="/create-cv">
+                      <Link to="/cv">
                         <button type="button" className="btn btn-select"> Select </button>
                       </Link>
-                      <Link to="/create-cv">
+                      <Link to="/template">
                         <button type="button" className="btn btn-select mt-3"> Edit </button>
                       </Link>
 
@@ -68,8 +68,10 @@ class MyTemplates extends Component {
           <span>My Templates</span>
         </div>
         <div className="default-template--header flex-end">
-
+          <Link to="/cv">
           <button type="button" className="btn btn--add">Add</button>
+          </Link>
+          
         </div>
         {this.renderTemplates()}
         {this.renderPageNumerNav()}

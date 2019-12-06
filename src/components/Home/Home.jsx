@@ -1,24 +1,28 @@
 import React, { Component } from "react";
-
+import history from '../../util/history';
 import "../../css/home.css";
 import DefaultTemplates from "../../container/Home/DefaultTemplates";
 import TemplatesCategories from "./TemplatesCategories";
 import MyTemplates from "../../container/Home/MyTemplates";
 
 class Home extends Component {
-  test = () => {};
+  test = () => { };
+  
+  submitSeach = () => {
+    history.push('/template-category')
+  }
 
   render() {
     return (
       <>
         <div id='Home___Select_template___1' className='row mx-auto'>
           <div className='home-header'>
-        
+
             <div id='Component_5___2' className='Component_5___2'>
               <div id='Choose_Your_Favourite_CV_Templ'>
                 <span>Choose Your Favourite CV Template</span>
               </div>
-              <div id='Component_2___1' className='Component_2___1'>
+              <form id='Component_2___1' className='Component_2___1' onSubmit={this.submitSeach}>
                 <svg className='ic_search_24px' viewBox='3 3 28.582 29.475'>
                   <path
                     fill='rgba(164,164,164,1)'
@@ -33,15 +37,15 @@ class Home extends Component {
                     placeholder='Type name template here ...'
                   />
                 </div>
-              </div>
+              </form>
             </div>
           </div>
           <div className="home--body">
             <DefaultTemplates />
-            <TemplatesCategories/>
-            <MyTemplates/>
+            <TemplatesCategories />
+            <MyTemplates />
           </div>
-          
+
         </div>
       </>
     );

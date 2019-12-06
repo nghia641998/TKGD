@@ -10,6 +10,8 @@ const Header = () => {
     setPath(location.pathname);
     if(location.pathname === '/' || location.pathname === '/category'){
       setVisible(false);
+    }else{
+      setVisible(true);
     }
   });
 

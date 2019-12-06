@@ -114,8 +114,8 @@ class OtherCV extends React.Component {
         <div className="list-cv-header">
           <div className="list-cv-title">Most popular
                     </div>
-          <div className="list-cv-more">See More &gt;
-                    </div>
+          <Link to="/category/all/all" className="list-cv-more">See More &gt;
+                    </Link>
         </div>
         <div className="list-cv-body d-flex flex-wrap">
           {listCV.map((e, index) => {
@@ -125,8 +125,8 @@ class OtherCV extends React.Component {
                   <img alt="template" src="/img/Image_4_A11_Rectangle_21_pattern.png" />
                   <div className="template-hover">
                     <div className="d-flex flex-column x-index-5">
-                      <Link to="create-cv">
-                      <button type="button" className="btn btn-select">Select</button>
+                      <Link to="cv-detail">
+                      <button type="button" className="btn btn-select">View</button>
                       </Link>
                       
                     </div>
