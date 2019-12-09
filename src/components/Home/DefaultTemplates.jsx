@@ -1,20 +1,21 @@
 import React, { Component } from 'react';
 import {Link} from "react-router-dom";
 
+import CV from '../data';
+
 class DefaultTemplates extends Component {
     
     renderCVTemplates = () => {
-        const arrTemp = [...Array(4).keys()];
 
         return(
-            <div className="d-flex flex-wrap justify-content-start">
+            <div className="row">
                 {
-                    arrTemp.map((item) => {
+                    CV.slice(0,4).map((item) => {
                         return (
-                            <div className="Repeat_Grid mb-3" 
+                            <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" 
                                 key={item}>
                                 <div className="image-cv">
-                                  <img alt="template" src="/img/Image_4_A11_Rectangle_21_pattern.png"/> 
+                                  <img alt="template" src={item}/> 
                                   <div className="template-hover">
                                       
                                           <Link to="/cv">

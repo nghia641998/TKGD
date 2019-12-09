@@ -34,11 +34,11 @@ class TemplatesCategories extends Component {
         ]
 
         return (
-            <div className="d-flex flex-wrap justify-content-between">
+            <div className="row">
                 {
                     categories.map((item) => {
                             return (
-                                <Link className=" category-item mb-3" 
+                                <Link className="col-6 col-sm-4 col-md-3 category-item mb-3" 
                                 to={`/template-category/${item.text}`}  key={item.text}>
                                   <img src={item.image} alt={item.text}/>
                                   <div>{item.text}</div>
@@ -58,7 +58,7 @@ class TemplatesCategories extends Component {
                     </div>
                 <div className="default-template--header flex-end">
                   
-                  <Link  to="/template-category" className="btn see-more">
+                  <Link  to="/template-category" className="btn see-more mr-2">
                        See More &gt;
                   </Link>
                 </div>

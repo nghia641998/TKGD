@@ -61,12 +61,18 @@ const Header = () => {
       
 
       <div className='header-right'>
-        <div className={path === "/" ? "header-active" : ""}>
-        <Link to='/'>Template</Link>
+        
+        <Link to='/template-category'>
+        <div className={path === "/template-category" ? "header-active" : ""}>
+        Templates
         </div>
+        </Link>
+  
+        <Link to='/category'>
         <div className={path.includes("/category") ? "header-active" : ""}>
-          <Link to='/category'>Other CV&#39;s</Link>
+          Other CV&#39;s
         </div>
+        </Link>
         <div>My CV&#39;s</div>
         <div className='sepreate' />
         <div className='header-logout'>Logout</div>

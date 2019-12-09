@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import './OtherCV.scss';
+import CV from '../data';
 
 class OtherCV extends React.Component {
   constructor(props) {
@@ -107,8 +108,7 @@ class OtherCV extends React.Component {
   }
 
   renderListCV() {
-    const listCV = new Array(16);
-    listCV.fill(1);
+
     return (
       <div className="list-cv">
         <div className="list-cv-header">
@@ -117,12 +117,12 @@ class OtherCV extends React.Component {
           <Link to="/category/all/all" className="list-cv-more">See More &gt;
                     </Link>
         </div>
-        <div className="list-cv-body d-flex flex-wrap">
-          {listCV.map((e, index) => {
+        <div className="row">
+          {CV.map((item, index) => {
             return (
-              <div className="Repeat_Grid mb-3" key={index}>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" key={index}>
                 <div className="image-cv">
-                  <img alt="template" src="/img/Image_4_A11_Rectangle_21_pattern.png" />
+                  <img alt="template" src={item} />
                   <div className="template-hover">
                     <div className="d-flex flex-column x-index-5">
                       <Link to="cv-detail">

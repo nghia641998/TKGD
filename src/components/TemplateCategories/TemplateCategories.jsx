@@ -3,20 +3,21 @@ import {Link} from 'react-router-dom';
 import './TemplateCategories.scss';
 import history from '../../util/history';
 
+import CV from '../data';
+
 const TemplateCategories = () => {
 
   function renderListTemplate() {
-    const list = new Array(12);
-    list.fill(1);
+
     return (
       <div className="container">
         <div className="row  ml-3 mb-4">
           {
-            list.map((_, index) => {
+            CV.map((item, index) => {
               return (
-                <div className="col-sm-4 mb-4" key={index}>
-                  <div className="containerCV" style={{ width: "220px", backgroundColor: "black" }}>
-                    <img src="/img/Image_4_A11_Rectangle_21_pattern.png" alt="" className="image" />
+                <div className="col-12 col-sm-6 col-md-4 mb-4" key={index}>
+                    <div className="containerCV">
+                    <img src={item} alt="" className="image" />
                     <div className="middle">
                       <div>
                         <button type="button" className="btn btn-outline-secondary mybtn" data-toggle="modal" data-target=".bd-example-modal-lg">Preview</button>
@@ -27,8 +28,8 @@ const TemplateCategories = () => {
                       <Link to='/template'>
                         <button type="button" className="btn btn-outline-secondary mybtn">Duplicate</button>
                       </Link>
-
-                    </div>
+                      </div>
+                    
                   </div>
                 </div>
               )
@@ -42,7 +43,7 @@ const TemplateCategories = () => {
 
 
   return (
-    <div className="TemplateCategories pt-5" >
+    <div className="TemplateCategories py-5 " >
       <div className="modal fade bd-example-modal-lg" tabIndex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div className="modal-dialog modal-lg">
           <div className="modal-content">
@@ -108,7 +109,7 @@ const TemplateCategories = () => {
           <div className="col-sm-9 border-left">
             {renderListTemplate()}
             <nav aria-label="Page navigation example">
-              <ul className="pagination justify-content-center">
+              <ul className="pagination justify-content-end">
                 <li className="page-item disabled">
                   <a className="page-link" href="script:0" tabIndex="-1">Previous</a>
                 </li>

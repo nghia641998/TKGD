@@ -3,6 +3,7 @@ import { withRouter, Link } from 'react-router-dom';
 
 import '../../css/cv-in-category.css';
 import SortOption from '../../container/OtherCVCategories/SortOption';
+import CV from '../data';
 
 class CVInCategory extends Component {
 
@@ -151,7 +152,7 @@ class CVInCategory extends Component {
     renderListCV = () => {
         const { match, numberOfCV } = this.props;
         const { category, sub }= match.params;
-        const templates = [...Array(10).keys()];
+
         return (
             <div className="categories-body">
                 <div className="mt-3 mb-3 ml-2">
@@ -164,14 +165,14 @@ class CVInCategory extends Component {
                         <SortOption/>
                     </div>
                     
-                    <div className="d-flex flex-wrap justify-content-start">
+                    <div className="row">
                         {
-                            templates.map((item) => {
+                            CV.map((item) => {
                                 return (
-                                    <div className="Repeat_Grid m-2"
+                                    <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4"
                                         key={item}>
                                         <div className="image-cv">
-                                        <img alt="template" src="/img/Image_4_A11_Rectangle_21_pattern.png"/> 
+                                        <img alt="template" src={item}/> 
                                         <div className="template-hover">
                                             <div className="d-flex flex-column x-index-5">
                                                 <Link to="/cv-detail">

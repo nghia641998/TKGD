@@ -34,7 +34,7 @@ class Home extends Component {
                   <input
                     className='custom-input-text'
                     type='text'
-                    placeholder='Type name template here ...'
+                    placeholder='Find template here ...'
                   />
                 </div>
               </form>
