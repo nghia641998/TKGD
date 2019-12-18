@@ -353,11 +353,11 @@ const CreateCV = () => {
         <div className='row'>
           <div className='col-sm-1' />
           <div className='col-sm-8 mt-4'>
-            <div className='row id_1 border-bottom' style={{ height: "250px" }}>
-              <div className='col-sm-4'>
+            <div className='row id_1 border-bottom' style={{ height: "max-content" }}>
+              <div className='col-sm-4 col-12'>
                 <img alt="" src="/images/user_logo.png" className='center' />
               </div>
-              <div className='col-sm-8' id='id_4'>
+              <div className='col-sm-8 col-12' id='id_4'>
                 <input
                   type='text'
                   className='form-control'
@@ -563,7 +563,7 @@ const CreateCV = () => {
                 </div>
               </div>
             </div>
-            <div className='row' style={{ marginBottom: "150px" }}>
+            <div className='row mbt-150'>
               <button
                 type='button'
                 className='button mt-4 mb-4 addpagebtn'
@@ -573,9 +573,9 @@ const CreateCV = () => {
               </button>
             </div>
           </div>
-          <div className='col-sm-3'>
+          <div className='col-sm-3 col-12 p-0'>
             <div
-              className='container-fluid ml-3 rounded mt-4'
+              className='container-fluid ml-3 bd-rounded mt-4 create-cv-handler'
               style={{ background: "white", width: "60%" }}
             >
               <label style={{ height: "20px" }} />
