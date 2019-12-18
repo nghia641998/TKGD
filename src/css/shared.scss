@@ -147,8 +147,43 @@
   #Component_2___1{
     width: 80vw;
   }
-}
 
+  div.justify-content-between.header {
+    padding: 0px;
+    padding-top: 90px;
+    white-space: nowrap;
+  }
+  div.justify-content-between.header > div{
+    width: 100%;
+    overflow: hidden;
+    overflow-x: auto;
+  }
+  
+  div.justify-content-between.header > a{
+    display: block;
+  width: 100vw;
+  text-align: right;
+  margin-top: 10px;
+  }
+  
+  div.d-flex.position-tags {
+    padding: 0px;
+    padding-left: 10px;
+  }
+  div.categories-body{
+    padding: 0px;
+    padding-left: 10px;
+  }
+  .align-items-center.pdr-5{
+    padding-right: .5rem;
+  }
+  div.seach-box{
+    display: none;
+  }
+}
+.pdr-5{
+  padding-right: 5rem;
+}
 .footer-info-content {
   font-size: 14px;
   line-height: 25px;
