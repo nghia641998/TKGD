@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   position: fixed;
-  width: 100%;
+  width: 100vw;
   z-index: 999;
   background: white;
   box-shadow: 1px 3px 5px #80808069;
@@ -13,6 +13,7 @@
 .header-right {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .Header-left {
@@ -26,7 +27,7 @@
   text-decoration: none;
   color: #23238b;
 }
-.header-right  div:not(.sepreate){
+.header-right > div:not(.sepreate){
   margin: 0px 20px;
   padding-bottom: 5px;
   font-size: 18px;
@@ -74,6 +75,9 @@
   background-color: #4e4e4e;
   padding: 30px 20px;
 }
+.footer > div {
+  text-align: center;
+}
 
 .logo {
   font-size: 40px;
@@ -98,6 +102,51 @@
 
 .footer-info {
   text-align: left;
+}
+.menu-hidden{
+  font-size: 30px;
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .menu-hidden {
+    display: block;
+  }
+  .header-right > div >*:not(.menu-hidden) {
+    display: none;
+  }
+  .header-right{
+    margin-right: 0px;
+  padding-right: 0px;
+  }
+  .header-right.menu-show > div{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    padding-right: 35px;
+    padding-top: 18px;
+    margin: 0px !important;
+    z-index: 0;
+    background-color: green;
+  }
+  .header-right.menu-show > div >*:not(.sepreate) {
+    display: block;
+    margin-right: 0px;
+  }
+  .header-right.menu-show > div > .sepreate {
+    padding-left: 250px;  
+  }
+  
+  .Header{
+    padding: 0 15px !important;
+  }
+  #Component_2___1{
+    width: 80vw;
+  }
 }
 
 .footer-info-content {

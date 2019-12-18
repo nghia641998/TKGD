@@ -56,8 +56,7 @@
 
 #Choose_Your_Favourite_CV_Templ {
   overflow: visible;
-  width: 601px;
-  white-space: nowrap;
+  width: 100vw;
   text-align: center;
   font-family: Segoe UI;
   font-style: normal;
