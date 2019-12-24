@@ -10,19 +10,10 @@ const CreateCV = () => {
         <div className='row'>
           <div className='col-sm-1' />
           <div className='col-sm-8 mt-4'>
-            <div className='row id_1'>
+            <div className='row id_1 toolbar'>
               <div id='cvo-toolbar'>
                 <div className='toolbar-global-controls'>
-                  <Link to="/template-category"
-                    className='item button'
-                    id='btn-change-template'
-                    data-toggle='tooltip'
-                    data-original-title='Đổi Mẫu CV khác'
-                    style={{ width: "15%" }}
-                  >
-                    <div className='title'>Change template</div>
-                    <i className='fa fa-sy fa-recycle' />
-                  </Link>
+                  
                   <div
                     id='toolbar-color'
                     data-toggle='tooltip'
@@ -300,49 +291,25 @@ const CreateCV = () => {
                       </div>
                     </div>
                   </div>
+                  <Link to="/template-category"
+                    className='item button'
+                    id='btn-change-template'
+                    data-toggle='tooltip'
+                    data-original-title='Đổi Mẫu CV khác'
+                    style={{ width: "15%" }}
+                  >
+                    <div className='title'>Change template</div>
+                    <i className='fa fa-sy fa-recycle' />
+                  </Link>
                   <div
                     className='item button border-left'
                     style={{ width: "15%" }}
                     id='btn-edit-layout'
-                    data-toggle='modal'
-        data-target='#addWidget'
+                    
                   >
-                    <div className='title'>Add widget</div>
-                    <i className='fa fa-plus-square' />
-                    <div className='modal fade' id='addWidget' role='dialog'>
-                      <div className='modal-dialog'>
-                        <div className='modal-content'>
-                          <div className='modal-header'>
-                            <button type='button' className='close' data-dismiss='modal'>
-                              &times;
-              </button>
-                            <h4 className='modal-title'>ADD NEW WIDGET</h4>
-                          </div>
-                          <div className='modal-body'>
-                            <div className='modal-body-title'>Basic</div>
-                            <div className='modal-body-content'>
-                              <button type="button" className='btn'>Date</button>
-                              <button type="button" className='btn'>Image</button>
-                              <button type="button" className='btn'>Profile</button>
-                              <button type="button" className='btn'>Name</button>
-                              <button type="button" className='btn'>List</button>
-                              <button type="button" className='btn'>Contact</button>
-                            </div>
-                            <div className='modal-body-title'>Advance</div>
-                            <div className='modal-body-content'>
-                              <button type="button" className='btn'>Education</button>
-                              <button type="button" className='btn'>Archievements</button>
-                              <button type="button" className='btn'>Interests</button>
-                              <button type="button" className='btn'>Projects</button>
-                              <button type="button" className='btn'>Skills</button>
-                              <button type="button" className='btn'>Timeline</button>
-                            </div>
-                          </div>
-                          
-                        </div>
-                      </div>
+                    <div className='title'>Help</div>
+                    <i className='far fa-question-circle' style={{fontSize:'25px'}}/>
                     </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -493,11 +460,48 @@ const CreateCV = () => {
                   <button
                     type='button'
                     className='button mt-4 mybtn'
+                    data-toggle='modal'
+        data-target='#addWidget'
                     style={{ width: "100%", borderStyle: "dashed", borderColor: "gray" }}
                   >
                     Add Element{" "}
                     <i className='fa fa-plus ml-5' aria-hidden='true' />
                   </button>
+                  
+                    <div className='modal fade' id='addWidget' role='dialog'>
+                      <div className='modal-dialog'>
+                        <div className='modal-content'>
+                          <div className='modal-header'>
+                            <button type='button' className='close' data-dismiss='modal'>
+                              &times;
+              </button>
+                            <h4 className='modal-title'>ADD NEW WIDGET</h4>
+                          </div>
+                          <div className='modal-body'>
+                            <div className='modal-body-title'>Basic</div>
+                            <div className='modal-body-content'>
+                              <button type="button" data-dismiss='modal' className='btn'>Date</button>
+                              <button type="button" data-dismiss='modal' className='btn'>Image</button>
+                              <button type="button" data-dismiss='modal' className='btn'>Profile</button>
+                              <button type="button" data-dismiss='modal' className='btn'>Name</button>
+                              <button type="button" data-dismiss='modal' className='btn'>List</button>
+                              <button type="button" data-dismiss='modal' className='btn'>Contact</button>
+                            </div>
+                            <div className='modal-body-title'>Advance</div>
+                            <div className='modal-body-content'>
+                              <button type="button" data-dismiss='modal' className='btn'>Education</button>
+                              <button type="button" data-dismiss='modal' className='btn'>Archievements</button>
+                              <button type="button" data-dismiss='modal' className='btn'>Interests</button>
+                              <button type="button" data-dismiss='modal' className='btn'>Projects</button>
+                              <button type="button" data-dismiss='modal' className='btn'>Skills</button>
+                              <button type="button" data-dismiss='modal' className='btn'>Timeline</button>
+                            </div>
+                          </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  
                 </div>
               </div>
             </div>

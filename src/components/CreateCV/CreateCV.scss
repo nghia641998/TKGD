@@ -2645,12 +2645,16 @@
   }
   #cvo-toolbar {
     width: 100%;
-    margin-bottom: 3px;
+    
     box-sizing: border-box !important;
   }
   .toolbar-global-controls {
-    background-color: #fff;
-    box-shadow: 0 1px 2px 0 #ccc;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  .toolbar{
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
   }
   #cvo-toolbar.fixed {
     position: fixed;
@@ -2661,8 +2665,8 @@
   #cvo-toolbar .item {
     float: left;
     padding: 1px 2px;
-    border-top: solid 1px #eee;
-    border-right: 1px solid #eee;
+    
+    
     min-height: 35px;
     text-align: center;
     color: #666;
@@ -2801,7 +2805,7 @@
     background-color: #fff;
     max-width: 210mm;
     margin: 0 auto;
-    padding: 10px 1px;
+    padding: 10px 20px 10px 0px;
     border-right: 1px solid #eee;
   }
   .editor-control {
@@ -2883,7 +2887,8 @@
     }
     #toolbar-color {
       height: 80px;
-      max-width: 162px;
+      max-width: 200px;
+      
     }
     #toolbar-color .options {
       padding: 0 2px !important;
@@ -2899,6 +2904,7 @@
     float: left;
     display: table;
     cursor: pointer;
+    padding-bottom: 3px;
     border-top: solid 1px #eee;
     border-left: 1px solid #eee;
     border-right: 1px solid #eee;

@@ -11,15 +11,31 @@ const Header = () => {
     setShow(!temp);
   }
 
+  function setMobileMode(_path){
+    if(_path.includes('/cv','/template')){
+      document.getElementsByTagName("META")[1].content="width=1280";
+    }else{
+      document.getElementsByTagName("META")[1].content="width=device-width, initial-scale=1";
+    }
+  }
+
+  setMobileMode(window.location.pathname);
+
   History.listen(location => {
     setPath(location.pathname);
     if (location.pathname === '/' || location.pathname === '/category') {
-      setVisible(false);
+      const currentScrollPos = window.pageYOffset;
+      const _visible = currentScrollPos > document.querySelector('.Header').offsetHeight;
+      setVisible(_visible);
     } else {
       setVisible(true);
     }
+
+    setMobileMode(location.pathname)
+    
   });
 
+  
 
 
   useEffect(() => {
