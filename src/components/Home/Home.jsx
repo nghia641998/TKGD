@@ -20,7 +20,7 @@ class Home extends Component {
 
             <div id='Component_5___2' className='Component_5___2'>
               <div id='Choose_Your_Favourite_CV_Templ'>
-                <span>Choose Your Favourite CV Template</span>
+                <span>Find Your Favourite CV Template</span>
               </div>
               <form id='Component_2___1' className='Component_2___1' onSubmit={this.submitSeach}>
                 <svg className='ic_search_24px' viewBox='3 3 28.582 29.475'>

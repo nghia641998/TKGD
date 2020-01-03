@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './TemplateCategories.scss';
 import history from '../../util/history';
 
@@ -11,12 +11,12 @@ const TemplateCategories = () => {
 
     return (
       <div className="container">
-        <div className="row  ml-3 mb-4">
+        <div className="row list-template ml-3 mb-4">
           {
             CV.map((item, index) => {
               return (
                 <div className="col-12 col-sm-6 col-md-4 mb-4" key={index}>
-                    <div className="containerCV">
+                  <div className="containerCV">
                     <img src={item} alt="" className="image" />
                     <div className="middle">
                       <div>
@@ -28,8 +28,8 @@ const TemplateCategories = () => {
                       <Link to='/template'>
                         <button type="button" className="btn btn-outline-secondary mybtn">Duplicate</button>
                       </Link>
-                      </div>
-                    
+                    </div>
+
                   </div>
                 </div>
               )
@@ -60,35 +60,37 @@ const TemplateCategories = () => {
 
             </div>
             <div className="modal-footer">
-              
+
               <button onClick={() => history.push('/cv')} data-dismiss="modal" type="button" className="btn btn-primary">Use this template</button>
-              
+
               <button onClick={() => history.push('/template')} data-dismiss="modal" type="button" className="btn btn-secondary">Duplicate template</button>
-              
+
             </div>
           </div>
         </div>
       </div>
       <div className="container pt-5">
         <div className="row">
-          <div className="container-fluid" style={{ display: "flex", justifyContent: "space-between", marginLeft: "3%", marginRight: "3%" }}>
-            <span style={{ display: "inline-flex" }}>
-              <h5 style={{ fontWeight: "normal", fontStyle: "italic" }}>1-9 of over 23 results for</h5>
-              <h5>&quot;IT - Software&quot;</h5>
-            </span>
-            <span style={{ display: "inline-flex" }}>
-              <h5 style={{ fontWeight: "normal", fontStyle: "italic", marginRight: "20px" }}>Sort by</h5>
-              <h5>&quot;IT - Software&quot;</h5>
-              <div className="btn-group">
-                <button type="button" data-toggle="dropdown" style={{ background: "transparent", border: "none", outline: "none" }} className="needHover">
-                  <i className="fa fa-angle-down fa-2x" aria-hidden="true" />
-                </button>
-                <div className="dropdown-menu dropdown-menu-right">
-                  <button className="dropdown-item" type="button">Name</button>
-                  <button className="dropdown-item" type="button">Publication date</button>
+          <div className="container-fluid">
+            <div className="row filter-options">
+              <span className="col-12 col-md-6 d-flex">
+                <h5 style={{ fontWeight: "normal", fontStyle: "italic" }}>1-9 of over 23 results for</h5>
+                <h5>&quot;IT - Software&quot;</h5>
+              </span>
+              <span className="col-12 col-md-6 d-flex justify-content-end">
+                <h5 style={{ fontWeight: "normal", fontStyle: "italic", marginRight: "20px" }}>Sort by</h5>
+                <h5>&quot;IT - Software&quot;</h5>
+                <div className="btn-group">
+                  <button type="button" data-toggle="dropdown" style={{ background: "transparent", border: "none", outline: "none" }} className="needHover">
+                    <i className="fa fa-angle-down fa-2x" aria-hidden="true" />
+                  </button>
+                  <div className="dropdown-menu dropdown-menu-right">
+                    <button className="dropdown-item" type="button">Name</button>
+                    <button className="dropdown-item" type="button">Publication date</button>
+                  </div>
                 </div>
-              </div>
-            </span>
+              </span>
+            </div>
           </div>
         </div>
 

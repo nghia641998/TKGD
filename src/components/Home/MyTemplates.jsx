@@ -5,6 +5,13 @@ import CV from '../data';
 
 class MyTemplates extends Component {
 
+  constructor(props){
+    super(props);
+    this.state = {
+      selectedPage: 0
+    }
+  }
+
   renderTemplates = () => {
 
     return (
@@ -40,15 +47,16 @@ class MyTemplates extends Component {
 
 
   renderPageNumerNav = () => {
-    const { selectedPage } = this.props;
+    const {selectedPage} = this.state;
+
     const arrPageNumber = [...Array(4).keys()];
     return (
-      <div className="d-flex justify-content-end mb-5 mt-4">
+      <div className="d-flex justify-content-end mb-5 mt-4"> 
         {
-          arrPageNumber.map((item) => {
+          arrPageNumber.map((item,index) => {
             return (
               <a key={item} className={`btn-page-number ${item === selectedPage && 'btn-page-number-selected'}`}
-                href="script:0">
+                href="script:0" onClick={_ => this.setState({selectedPage:index})}>
                 {item + 1}
               </a>
             );

@@ -159,7 +159,7 @@ class CVInCategory extends Component {
                     <h4>{`Result for "${sub}" in "${category}"`}</h4>
                 </div>
                 { this.renderFilterOption() }
-                <div className="d-flex flex-column align-items-center pr-5">
+                <div className="d-flex flex-column align-items-center pdr-5">
                     <div className="w-100 pl-3 pr-3 mb-2 d-flex align-items-center justify-content-between">
                         <div className="float-left result">{numberOfCV} results</div>
                         <SortOption/>
