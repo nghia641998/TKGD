@@ -11,7 +11,7 @@ const TemplateCategories = () => {
 
     return (
       <div className="container">
-        <div className="row  ml-3 mb-4">
+        <div className="row list-template ml-3 mb-4">
           {
             CV.map((item, index) => {
               return (
@@ -72,12 +72,12 @@ const TemplateCategories = () => {
       <div className="container pt-5">
         <div className="row">
           <div className="container-fluid">
-            <div className="row">
-              <span className="col-md-6 d-flex">
+            <div className="row filter-options">
+              <span className="col-12 col-md-6 d-flex">
                 <h5 style={{ fontWeight: "normal", fontStyle: "italic" }}>1-9 of over 23 results for</h5>
                 <h5>&quot;IT - Software&quot;</h5>
               </span>
-              <span className="col-md-6 d-flex justify-content-end">
+              <span className="col-12 col-md-6 d-flex justify-content-end">
                 <h5 style={{ fontWeight: "normal", fontStyle: "italic", marginRight: "20px" }}>Sort by</h5>
                 <h5>&quot;IT - Software&quot;</h5>
                 <div className="btn-group">

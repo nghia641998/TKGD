@@ -9,7 +9,7 @@ const Header = () => {
   function openMenu() {
     let temp = isShow;
     setShow(!temp);
-  }
+  } 
 
   function setMobileMode(_path){
     if(_path.includes('/cv','/template')){
@@ -83,8 +83,9 @@ const Header = () => {
 
 
       <div className={!isShow ? 'header-right w-75' : 'header-right w-75 menu-show'}>
-        <div className="header-right w-100">
-          <i className="fas fa-bars menu-hidden" onClick={openMenu}></i>
+      
+        <div className="header-right header-right-content w-100">
+          
           <Link to='/template-category'>
             <div className={path === "/template-category" ? "header-active" : ""} style={{marginRight: '20px'}}>
               Templates
@@ -100,6 +101,7 @@ const Header = () => {
           <div className='sepreate' />
           <div className='header-logout'>Logout</div>
         </div>
+        <i className="fas fa-bars menu-hidden" onClick={openMenu}></i>
       </div>
     </div>
   );

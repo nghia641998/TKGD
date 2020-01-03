@@ -350,3 +350,41 @@
 .btn--add:hover{
   background: rgb(28, 160, 249);
 }
+
+@media only screen and (max-width: 600px){
+  .home-header{
+    height: 70vh;
+  }
+  #Component_5___2{
+    padding:0 30px;  
+  }
+  #Choose_Your_Favourite_CV_Templ{
+    font-size: 26px;
+    width: 100%;
+  }
+
+  #Component_2___1{
+    width: 78%;
+    margin-top: 26px;
+  }
+  .default-template--header{
+    margin-bottom: 26px;
+  }
+  .see-more{
+    font-size: 18px;
+    margin-top: 20px;
+    margin-right: -20px;
+  }
+  .default-template--header .btn--add{
+    margin-top: 30px;
+    margin-right: -20px;
+  }
+  .image-cv{
+    margin-bottom: 20px;
+    max-height: 500px;  
+  }
+  .image-cv img{
+    
+    box-shadow: 0 4px 8px #9a9a9a9e;
+  }
+}
